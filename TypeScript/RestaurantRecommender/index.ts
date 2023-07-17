@@ -9,6 +9,8 @@ let hour: number = new Date().getHours()
 const priceBracket: number = dollarSigns.length
 
 const filteredRestaurants = restaurants.filter((restaurant) => {
+	/* Filters restaurants list checking for a restaurant that matches the conditions below */
+
 	if (Number(restaurant.priceBracket) > priceBracket) {
 		return false
 	}
