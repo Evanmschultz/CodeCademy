@@ -1,13 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var restaurants_1 = require("./restaurants");
-var dollarSigns = '$$';
-var deliveryTimeMax = 90;
-var maxDistance = 10;
-var result;
-var hour = new Date().getHours();
-var priceBracket = dollarSigns.length;
-var filteredRestaurants = restaurants_1.default.filter(function (restaurant) {
+const restaurants_1 = require("./restaurants");
+const dollarSigns = '$$';
+const deliveryTimeMax = 90;
+const maxDistance = 10;
+let result;
+let hour = new Date().getHours();
+const priceBracket = dollarSigns.length;
+const filteredRestaurants = restaurants_1.default.filter((restaurant) => {
+    /* Filters restaurants list checking for a restaurant that matches the conditions below */
     if (Number(restaurant.priceBracket) > priceBracket) {
         return false;
     }
@@ -27,6 +28,7 @@ if (filteredRestaurants.length === 0) {
     result = 'There are no restaurants available right now.';
 }
 else {
-    result = "We found ".concat(filteredRestaurants.length, " restaurants, the first is ").concat(filteredRestaurants[0].name, ".");
+    result = `We found ${filteredRestaurants.length} restaurants, the first is ${filteredRestaurants[0].name}.`;
 }
 console.log(result);
+//# sourceMappingURL=index.js.map

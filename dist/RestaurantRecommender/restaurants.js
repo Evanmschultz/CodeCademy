@@ -42,3 +42,4 @@ exports.default = [
         distance: '12'
     }
 ];
+//# sourceMappingURL=restaurants.js.map
